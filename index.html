@@ -292,6 +292,88 @@
   .hc-steps{font-size:12px;color:#8ab4ff;font-weight:700;margin-top:12px;}
   .home-foot{text-align:center;color:var(--muted);font-size:13px;margin-top:28px;}
 
+  /* ---------- BGP ---------- */
+  .ascloud{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;max-width:780px;}
+  .aschip{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:9px 13px;text-align:center;font-size:12px;min-width:84px;}
+  .aschip .ai{font-size:22px;display:block;}
+  .aschip .an{font-weight:700;font-size:10.5px;color:var(--muted);}
+  .aspath{display:inline-flex;align-items:center;gap:7px;font-weight:800;font-size:16px;background:#0d1130;border:1px solid var(--line);border-radius:10px;padding:10px 16px;flex-wrap:wrap;justify-content:center;}
+  .aspath .asn{background:#1e2347;border-radius:6px;padding:3px 10px;color:#74b9ff;}
+  .aspath .arrow{color:var(--muted);}
+  .bgp-card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:13px 18px;font-size:13.5px;max-width:660px;text-align:center;line-height:1.6;}
+  .routecmp{display:flex;flex-direction:column;gap:10px;width:100%;max-width:640px;}
+  .routerow{display:flex;align-items:center;gap:12px;background:var(--panel);border:1px solid var(--line);border-radius:10px;padding:10px 14px;flex-wrap:wrap;}
+  .routerow.win{border-color:#00b894;}
+  .routerow.lose{opacity:.55;}
+  .routerow .tag{font-size:11px;font-weight:800;padding:2px 10px;border-radius:999px;flex:none;}
+  .routerow.win .tag{background:#00b894;color:#063;}
+  .routerow.lose .tag{background:#3a4170;color:#cdd3f5;}
+
+  /* ---------- home sections ---------- */
+  .sec-h{margin:34px 0 14px;}
+  .sec-h:first-child{margin-top:6px;}
+  .sec-h h2{font-size:23px;margin:0;}
+  .sec-h p{margin:4px 0 0;color:var(--muted);font-size:14px;}
+
+  /* ---------- load balancer: server farm ---------- */
+  .farm{display:flex;flex-direction:column;align-items:center;width:100%;max-width:780px;}
+  .lb-users{display:flex;gap:8px;font-size:27px;}
+  .vbeam{width:4px;height:32px;background:#222a55;position:relative;border-radius:4px;overflow:hidden;margin:3px 0;}
+  .vbeam .vb,.dconn .vb{position:absolute;left:50%;width:10px;height:10px;margin-left:-5px;border-radius:50%;background:#8ab4ff;box-shadow:0 0 10px #8ab4ff;animation:vdrop 1.1s linear infinite;}
+  @keyframes vdrop{from{top:-10px;}to{top:120%;}}
+  .lb-bar{width:100%;max-width:560px;background:linear-gradient(90deg,#0b3d34,#10241c);border:2px solid #00b894;border-radius:12px;padding:12px;text-align:center;font-weight:800;color:#55efc4;font-size:15px;}
+  .lb-pool{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;}
+  .poolcol{display:flex;flex-direction:column;align-items:center;}
+  .dconn{width:4px;height:28px;background:#222a55;position:relative;border-radius:4px;overflow:hidden;}
+  .srv{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:10px 14px;text-align:center;min-width:96px;}
+  .srv.down{opacity:.5;border-color:#ff7675;}
+  .srv .si{font-size:26px;}
+  .srv .sn{font-size:11px;color:var(--muted);font-weight:700;margin-top:2px;}
+  .loadbar{height:6px;background:#20254a;border-radius:999px;overflow:hidden;margin-top:7px;}
+  .loadbar>div{height:100%;border-radius:999px;}
+  .srv .hd{font-size:10px;margin-top:5px;font-weight:700;}
+  .overloaded{animation:shake .35s infinite;}
+  @keyframes shake{0%,100%{transform:translateX(0)}25%{transform:translateX(-2px)}50%{transform:translateX(2px)}75%{transform:translateX(-2px)}}
+  .farm-cap{font-size:13.5px;color:var(--muted);text-align:center;max-width:660px;margin-top:6px;line-height:1.6;}
+  .farm-cap b{color:#fff;}
+
+  /* region (local vs global) */
+  .region-box{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:14px 20px;text-align:center;font-weight:700;font-size:13px;}
+  .region-box .rl{font-size:11px;color:var(--muted);display:block;margin:6px 0;}
+  .region-box .reg-srv{font-size:24px;}
+
+  /* geolocation */
+  .geowrap{display:flex;align-items:center;gap:16px;flex-wrap:wrap;justify-content:center;}
+  .geo-user{background:#2a230d;border:1px solid #fdcb6e;border-radius:14px;padding:14px 18px;text-align:center;font-size:28px;}
+  .geo-user .gname{font-size:12px;color:#fdcb6e;margin-top:4px;font-weight:700;}
+  .geo-dcs{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;}
+  .dc{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:12px 14px;text-align:center;min-width:118px;}
+  .dc.near{border-color:#00b894;box-shadow:0 0 0 2px #00b89433;}
+  .dc.far{border-color:#ff7675;}
+  .dc .di{font-size:26px;}
+  .dc .dn{font-weight:700;font-size:12px;margin-top:3px;}
+  .dc .dl{font-size:12px;margin-top:6px;font-weight:700;}
+
+  /* ---------- LB high availability ---------- */
+  .vip-badge{background:#10241c;border:1px solid #00b89455;border-radius:999px;padding:8px 18px;font-weight:700;color:#55efc4;font-size:13.5px;}
+  .ha-pair{display:flex;align-items:center;gap:16px;flex-wrap:wrap;justify-content:center;}
+  .ha-lb{background:var(--panel);border:2px solid var(--line);border-radius:14px;padding:16px 22px;text-align:center;font-weight:800;font-size:16px;min-width:160px;}
+  .ha-lb.active{border-color:#00b894;}
+  .ha-lb.standby{border-color:#3a4170;opacity:.85;}
+  .hastate{font-size:11px;font-weight:700;display:block;margin-top:6px;}
+  .heartbeat{display:flex;flex-direction:column;align-items:center;font-size:20px;color:#ff7675;animation:pulse 1.2s infinite;}
+  .heartbeat .hb-line{width:62px;height:3px;background:repeating-linear-gradient(90deg,#ff767599 0 8px,transparent 8px 14px);margin:4px 0;}
+  .heartbeat span{font-size:10px;color:var(--muted);}
+  @keyframes pulse{0%,100%{opacity:1}50%{opacity:.45}}
+
+  /* ---------- LB tiers ---------- */
+  .tier{width:100%;max-width:560px;background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:11px 16px;text-align:center;}
+  .tier.t1{border-color:#0984e3;} .tier.t2{border-color:#e84393;}
+  .tier .tlabel{font-size:11px;color:var(--muted);font-weight:700;text-transform:uppercase;letter-spacing:.5px;}
+  .tier .trow{font-size:24px;margin-top:3px;letter-spacing:5px;}
+  .tier .tdesc{font-size:11.5px;color:var(--muted);margin-top:3px;letter-spacing:normal;}
+  .tier-arrow{font-size:18px;color:#3a4170;}
+
   /* ---------- done ---------- */
   .chk{width:96px;height:96px;border-radius:50%;background:#00b894;color:#063;display:flex;align-items:center;justify-content:center;
        font-size:54px;animation:bounce .6s;box-shadow:0 0 0 10px #00b89422;}
@@ -328,7 +410,7 @@
         <p>What really happens in the ~100 milliseconds between pressing Enter on <b>google.com</b> and the page appearing? Follow a single request through every layer, server, and cable — one step at a time.</p>
         <button class="btn primary big" id="startBtn">▶ Start from the beginning</button>
       </div>
-      <div class="home-grid" id="homeGrid"></div>
+      <div id="homeBody"></div>
       <div class="home-foot" id="homeFoot"></div>
     </div>
   </div>
@@ -388,7 +470,7 @@ const LYR={
 /* =====================================================================
    THE STORY  — a flat list of user-paced beats
    ===================================================================== */
-const BEATS=[
+const NET_BEATS=[
   {ch:'1 · The Click', scene:'title', ttl:'You open <span class="hl">google.com</span>',
    txt:'You type four letters and hit Enter. In the next ~100 milliseconds, your request will be wrapped in five layers of headers, find Google’s address through a chain of servers, hop across your home, your city, and the internet backbone — and come back with a web page. Let’s follow it, one step at a time.'},
 
@@ -488,26 +570,80 @@ const BEATS=[
   {ch:'9 · How the Signal Travels', scene:'cellular', ttl:'Wireless: 2G → 3G → 4G → 5G',
    txt:'Not on Wi-Fi or fibre? Your phone reaches the internet over the <b>cellular</b> network. Each generation roughly multiplied the bandwidth and cut the latency of the one before it.'},
 
+  /* ---- BGP: how routers learn the way ---- */
+  {ch:'10 · BGP — Mapping the Internet', scene:'bgpProblem', ttl:'No one owns the map',
+   txt:'We’ve been forwarding toward Google’s IP — but <b>how does any router know the way</b>? The internet is tens of thousands of separate networks with <b>no central directory</b>. The protocol that stitches them together is <b>BGP</b>.'},
+  {ch:'10 · BGP — Mapping the Internet', scene:'bgpAS', ttl:'Autonomous Systems & their numbers',
+   txt:'Each network is an <b>Autonomous System</b> with a unique <b>ASN</b>. BGP is spoken at the <b>borders</b> between them, exchanging which destinations each can reach.'},
+  {ch:'10 · BGP — Mapping the Internet', scene:'bgpAnnounce', ttl:'“I can reach this!”',
+   txt:'Routing starts at the destination. <b>Google announces its prefix</b> — a range of IPs — to its neighbouring networks, saying it can be reached through them.'},
+  {ch:'10 · BGP — Mapping the Internet', scene:'bgpPath', ttl:'The announcement spreads — building the AS-PATH',
+   txt:'Neighbours pass the announcement along, each <b>stamping its own ASN</b> onto the path. Hop by hop, the whole internet learns a route to Google — and the recorded <b>AS-PATH</b> shows exactly which networks it crosses.'},
+  {ch:'10 · BGP — Mapping the Internet', scene:'bgpBest', ttl:'Choosing the best route',
+   txt:'Often there’s more than one way to reach a prefix. BGP runs a <b>best-path selection</b> — shortest AS-PATH plus business policy — and installs the winner.'},
+  {ch:'10 · BGP — Mapping the Internet', scene:'bgpForward', ttl:'Forwarding your packet',
+   txt:'With routes in hand, every router knows where to send your packet next. This is the control-plane knowledge that makes the upcoming journey possible.'},
+  {ch:'10 · BGP — Mapping the Internet', scene:'bgpTrust', ttl:'Built on trust (and why that’s risky)',
+   txt:'BGP’s great weakness: it mostly <b>trusts</b> what networks announce. One bad announcement can hijack traffic worldwide — which is why modern defences like <b>RPKI</b> exist.'},
+
   /* ---- WAN / across the internet ---- */
-  {ch:'10 · Across the Internet', scene:'wan', sub:0, ttl:'Out to your ISP',
+  {ch:'11 · Across the Internet', scene:'wan', sub:0, ttl:'Out to your ISP',
    txt:'The router forwards the packet to your <b>ISP</b>. The ISP’s router reads only the <b>destination IP</b> ('+SERVER_IP+'), decides the best next hop, and <b>decrements the TTL</b>. It never opens your encrypted data.'},
-  {ch:'10 · Across the Internet', scene:'wan', sub:1, ttl:'Onto the backbone',
+  {ch:'11 · Across the Internet', scene:'wan', sub:1, ttl:'Onto the backbone',
    txt:'From the ISP, the packet enters the high-capacity <b>internet backbone</b> — long-haul fibre carrying it across cities (and maybe under oceans). Another router, another TTL tick down.'},
-  {ch:'10 · Across the Internet', scene:'wan', sub:2, ttl:'Into Google’s network',
+  {ch:'11 · Across the Internet', scene:'wan', sub:2, ttl:'Into Google’s network',
    txt:'At a <b>peering point</b>, the packet crosses into <b>Google’s edge network</b>. Google often has servers close to you, so this is usually nearer than you’d think.'},
-  {ch:'10 · Across the Internet', scene:'wan', sub:3, ttl:'Arrival at the data center',
+  {ch:'11 · Across the Internet', scene:'wan', sub:3, ttl:'Arrival at the data center',
    txt:'A final hop delivers the packet to a <b>Google server</b> at '+SERVER_IP+'. It made it across the internet — and the original data inside was <b>never opened</b> by any router on the way.'},
 
   /* ---- ARRIVAL / reply ---- */
-  {ch:'11 · Arrival & Reply', scene:'arrival', sub:0, ttl:'Google unwraps the packet',
+  {ch:'12 · Arrival & Reply', scene:'arrival', sub:0, ttl:'Google unwraps the packet',
    txt:'The server reverses the whole process — <b>de-encapsulation</b>. It peels off each header from the outside in: bits → frame → packet → segment → decrypt → the original request.'},
-  {ch:'11 · Arrival & Reply', scene:'arrival', sub:1, ttl:'It reads your request',
+  {ch:'12 · Arrival & Reply', scene:'arrival', sub:1, ttl:'It reads your request',
    txt:'At the top, Google’s application finally sees the original <b class="mono">'+PAYLOAD+'</b> — byte-for-byte what you sent. It builds the <b>response</b>: the search page.'},
-  {ch:'11 · Arrival & Reply', scene:'arrival', sub:2, ttl:'The reply makes the trip back',
+  {ch:'12 · Arrival & Reply', scene:'arrival', sub:2, ttl:'The reply makes the trip back',
    txt:'The response gets wrapped in the same five layers and travels the <b>entire journey in reverse</b> — back through the backbone, your ISP, your router (NAT reverses), and to your laptop.'},
 
   {ch:'✓ Done', scene:'done', ttl:'google.com is on your screen 🎉',
    txt:'All of that — DNS lookup, five layers of wrapping, the trip across the internet, and the reply — happened in roughly <b>100 milliseconds</b>. Every time you load a page, this entire story plays out.'},
+];
+
+/* =====================================================================
+   SYSTEM DESIGN DECK — Load Balancer (a story-first mini-course)
+   ===================================================================== */
+const LB_BEATS=[
+  {ch:'LB · Why?', scene:'lbProblem', ttl:'One server, too many users',
+   txt:'Every system starts with one server. As users pour in, that single machine runs out of CPU, memory and connections — requests queue, the site crawls, and if it crashes <b>everything</b> goes down. We need more servers… but how does a user know which one to talk to?'},
+  {ch:'LB · Why?', scene:'lbSolution', ttl:'Spread the load',
+   txt:'The answer is a <b>load balancer</b>: a traffic cop in front of a pool of identical servers. Clients connect to <b>one address</b>, and the balancer decides which server handles each request — so load is spread and you can add servers as you grow (<b>horizontal scaling</b>).'},
+  {ch:'LB · How it works', scene:'lbHow', ttl:'What a load balancer actually does',
+   txt:'On every request a load balancer does four jobs — and quietly runs <b>health checks</b> in the background so a crashed server is pulled from rotation before any user notices.'},
+  {ch:'LB · L4 vs L7', scene:'lbLayers', ttl:'Two kinds: Layer 4 vs Layer 7',
+   txt:'Load balancers are named after the OSI layer they work at (remember those?). <b>Layer 4</b> is fast and simple — it forwards by IP &amp; port. <b>Layer 7</b> is smart — it reads the actual HTTP request and can route by URL, headers or cookies.'},
+  {ch:'LB · Routing', scene:'lbRoundRobin', ttl:'Picking a server: Round Robin',
+   txt:'How does the balancer choose <i>which</i> server? The classic answer is <b>Round Robin</b> — hand each new request to the next server in line, looping around. Even and simple when all servers are alike. Watch the requests fan out in turn above.'},
+  {ch:'LB · Routing', scene:'lbAlgos', ttl:'The routing algorithms',
+   txt:'Round Robin is just one option. Different workloads call for different <b>routing algorithms</b> — here are the ones you’ll meet most often.'},
+  {ch:'LB · State', scene:'lbState', ttl:'Stateful vs stateless',
+   txt:'A crucial question: must a server <i>remember</i> a user between requests? <b>Stateless</b> designs let any server handle any request — easy to scale. <b>Stateful</b> ones pin a user to one server (<b>sticky sessions</b>) — simpler, but fragile.'},
+  {ch:'LB · Local vs Global', scene:'lbLocalGlobal', ttl:'Local LB vs Global LB (GSLB)',
+   txt:'So far we’ve balanced within one building. Big services run in <b>many data centers worldwide</b>, which needs two tiers: a <b>Global</b> balancer to pick the best <i>region</i>, and a <b>Local</b> balancer inside each region to pick a <i>server</i>.'},
+  {ch:'LB · Geolocation', scene:'lbGeo', ttl:'The geolocation problem',
+   txt:'Why go global? <b>Geolocation.</b> If everyone hits one far-away data center, distant users suffer painful <b>latency</b> — Mumbai → Virginia is ~230 ms each way. A <b>Global Server Load Balancer (GSLB)</b> sends each user to their <b>nearest healthy</b> region instead.'},
+  {ch:'LB · DNS vs Anycast', scene:'lbGslbDns', ttl:'GSLB the DNS way',
+   txt:'One way to build a GSLB is with <b>DNS</b>. The GSLB acts as the domain’s authoritative DNS server and returns a <b>different IP per region</b>, based on where the request came from and which sites are healthy.'},
+  {ch:'LB · DNS vs Anycast', scene:'lbGslbAnycast', ttl:'GSLB the Anycast way',
+   txt:'The other way is <b>Anycast</b>. The <i>same</i> IP address is announced from many locations via <b>BGP</b> (Chapter 10!). The internet’s own routing then carries each user to the <b>closest</b> location — no DNS tricks required.'},
+  {ch:'LB · DNS vs Anycast', scene:'lbGslbCompare', ttl:'DNS vs Anycast — side by side',
+   txt:'Both land you at a nearby data center, but they trade off differently: control &amp; flexibility (DNS) versus speed &amp; instant failover (Anycast). Large services often use <b>both together</b>.'},
+  {ch:'LB · Pros & Cons', scene:'lbProsCons', ttl:'Advantages & disadvantages',
+   txt:'Load balancers are everywhere for good reason — but they’re <b>not free</b>. Here’s the honest balance sheet to weigh before adding one.'},
+  {ch:'LB · No More SPOF', scene:'lbSpof', ttl:'“But now the load balancer is the SPOF!”',
+   txt:'The classic gotcha: we added the LB to remove a single point of failure — but a <b>lone LB is itself a SPOF</b>. The standard fix is to run it <b>redundantly</b>, with a shared Virtual IP and a heartbeat so a standby can instantly take over.'},
+  {ch:'LB · No More SPOF', scene:'lbHA', ttl:'Active–Passive vs Active–Active',
+   txt:'There are two redundancy styles. <b>Active–Passive</b> keeps a hot standby; <b>Active–Active</b> runs every LB at once for more capacity. Either way, spread them across <b>zones/regions</b> and front them with <b>Anycast or DNS</b>.'},
+  {ch:'LB · Tiered LBs', scene:'lbTiers', ttl:'Tiers: Layer-4 in front of Layer-7',
+   txt:'Should you have multiple load balancers? At scale, yes — in <b>tiers</b>. A fast <b>Layer-4</b> front (Tier 1) absorbs massive connection volume and fans it out to a fleet of smart <b>Layer-7</b> balancers (Tier 2) that route by content. Each tier scales independently.'},
 ];
 
 /* =====================================================================
@@ -982,18 +1118,270 @@ function rAlgos(){
     </div>`).join('')+`</div></div>`;
 }
 
+/* ----- BGP: how routers learn the way ----- */
+const AS_NODES=[
+  {icon:'🏠',nm:'Your ISP', sub:'AS9498',  gl:'#00b894aa'},
+  {icon:'🌐',nm:'Backbone', sub:'AS3356',  gl:'#0984e3aa'},
+  {icon:'🔷',nm:'Google',   sub:'AS15169', gl:'#e84393aa'},
+];
+function rBgpProblem(){
+  const sample=[9498,3356,15169,7018,2914,6939,13335,32934,701,174,16509,8075];
+  const icons=['🏢','🌐','🏫','🔷','📡','🏬','💼','🛰️'];
+  let chips=''; sample.forEach((n,i)=> chips+=`<div class="aschip"><span class="ai">${icons[i%icons.length]}</span>AS${n}<div class="an">network</div></div>`);
+  return `<div class="art" style="gap:18px"><div class="ascloud">${chips}</div>
+    <div class="bgp-card">The internet isn’t one network — it’s <b>~75,000 independent networks</b> called <b>Autonomous Systems (AS)</b>, each run by a different ISP, company or university. There’s <b>no central map</b>. So how does your ISP know the way to Google? <b>BGP</b> — the Border Gateway Protocol — is how these networks tell each other who they can reach.</div></div>`;
+}
+function rBgpAS(){
+  return `<div class="art" style="gap:24px">${chainHtml(AS_NODES,-1,-1,'fwd','','')}
+    <div class="bgp-card">Every network gets a unique <b>AS Number (ASN)</b>. Your ISP might be <b>AS9498</b>, a Tier-1 backbone carrier <b>AS3356</b>, and Google <b>AS15169</b>. BGP is the language these networks speak at their <b>borders</b> to exchange routes.</div></div>`;
+}
+function rBgpAnnounce(){
+  return `<div class="art" style="gap:22px">${chainHtml(AS_NODES,2,1,'back','📢 I own 142.250.0.0/15','ans')}
+    <div class="bgp-card">It starts at the source. <b>Google (AS15169)</b> announces to its neighbours: <span class="mono">“the block <b>142.250.0.0/15</b> is reachable through me.”</span> A <b>prefix</b> is simply a range of IP addresses.</div></div>`;
+}
+function rBgpPath(){
+  return `<div class="art" style="gap:20px">${chainHtml(AS_NODES,0,0,'back','📢 reach 142.250.0.0/15 via me','ans')}
+    <div class="aspath">AS-PATH:<span class="asn">9498</span><span class="arrow">→</span><span class="asn">3356</span><span class="arrow">→</span><span class="asn">15169</span></div>
+    <div class="bgp-card">Each neighbour relays the announcement and <b>prepends its own ASN</b>, recording the trail. Your ISP now knows the full <b>AS-PATH</b> to Google: <b>9498 → 3356 → 15169</b>. That path is also a loop check — an AS that spots itself already in the path drops the route.</div></div>`;
+}
+function rBgpBest(){
+  return `<div class="art" style="gap:18px"><div class="routecmp">
+      <div class="routerow win"><span class="tag">CHOSEN</span><div class="aspath" style="font-size:14px;padding:6px 10px"><span class="asn">9498</span>→<span class="asn">3356</span>→<span class="asn">15169</span></div><span style="color:#55efc4;font-size:12px">shortest · 3 hops</span></div>
+      <div class="routerow lose"><span class="tag">IGNORED</span><div class="aspath" style="font-size:14px;padding:6px 10px"><span class="asn">9498</span>→<span class="asn">701</span>→<span class="asn">174</span>→<span class="asn">15169</span></div><span style="font-size:12px">longer · 4 hops</span></div>
+    </div>
+    <div class="bgp-card">A router often hears <b>several paths</b> to the same prefix. BGP picks the <b>best</b> — usually the <b>shortest AS-PATH</b>, but also weighing business <b>policy</b> (cheaper peering over paid transit, local preference). The winner goes into the routing table.</div></div>`;
+}
+function rBgpForward(){
+  return `<div class="art" style="gap:22px">${chainHtml(AS_NODES,2,1,'fwd','📦 → 142.250.190.78','')}
+    <div class="bgp-card">Now your packet for <b class="mono">142.250.190.78</b> arrives. Each router matches the <b>longest prefix</b> in its table and forwards to the next AS on the chosen path — <b>AS9498 → AS3356 → AS15169</b> — until it reaches Google. <b>This is exactly the hop-by-hop journey you’re about to watch.</b></div></div>`;
+}
+function rBgpTrust(){
+  return `<div class="art" style="gap:18px"><div class="routecmp">
+      <div class="routerow win"><span class="tag">LEGIT</span><span>🔷 Google <b>AS15169</b> announces <span class="mono">142.250.0.0/15</span></span></div>
+      <div class="routerow" style="border-color:#ff7675"><span class="tag" style="background:#ff7675;color:#2a0d0d">ROGUE</span><span>😈 Another AS wrongly announces the <i>same</i> block — a <b style="color:#ff7675">BGP hijack</b>, and traffic gets diverted</span></div>
+    </div>
+    <div class="bgp-card">BGP largely runs on <b>trust</b> — announcements are believed by default. A mistaken or malicious one (a <b>route leak / hijack</b>) can silently misroute global traffic. Defences like <b>route filtering</b> and <b>RPKI</b> — cryptographically signing who owns each prefix — now help routers reject bogus routes.</div></div>`;
+}
+
+/* ----- system design: Load Balancer ----- */
+function farmHtml(opts){
+  const users = Array.from({length:opts.userCount||5}).map(()=>'👤').join('');
+  let html='<div class="farm">';
+  html += `<div class="lb-users">${users}</div>`;
+  html += `<div class="vbeam"><div class="vb"></div></div>`;
+  if(opts.lb){
+    html += `<div class="lb-bar">⚖️ Load Balancer</div>`;
+    html += `<div class="lb-pool">`;
+    opts.servers.forEach((s,i)=>{
+      const color = s.down ? '#ff7675' : (s.load>85?'#ff7675':s.load>60?'#fdcb6e':'#00b894');
+      html += `<div class="poolcol">
+         <div class="dconn">${s.down?'':`<div class="vb" style="animation-delay:${(i*0.28).toFixed(2)}s"></div>`}</div>
+         <div class="srv ${s.down?'down':''}">
+           <div class="si">${s.down?'💥':'🖥️'}</div>
+           <div class="sn">${s.label||('Server '+(i+1))}</div>
+           <div class="loadbar"><div style="width:${s.down?100:s.load}%;background:${color}"></div></div>
+           <div class="hd" style="color:${color}">${s.down?'DOWN':s.load+'%'}</div>
+         </div></div>`;
+    });
+    html += `</div>`;
+  } else {
+    const s=opts.servers[0];
+    html += `<div class="srv overloaded" style="border-color:#ff7675;min-width:150px">
+        <div class="si">🔥🖥️</div><div class="sn">${s.label||'Single server'}</div>
+        <div class="loadbar"><div style="width:100%;background:#ff7675"></div></div>
+        <div class="hd" style="color:#ff7675">${s.load||100}% — overloaded</div></div>`;
+  }
+  html += '</div>';
+  return html;
+}
+function rLbProblem(){
+  return `<div class="art" style="gap:16px">
+    ${farmHtml({lb:false, userCount:8, servers:[{load:100,label:'Your only server'}]})}
+    <div class="farm-cap">As traffic grows, <b style="color:#ff7675">one server can’t keep up</b> — requests queue, responses slow to a crawl, and a crash takes the whole site down. You need more servers… but how do users know which one to hit?</div>
+  </div>`;
+}
+function rLbSolution(){
+  return `<div class="art" style="gap:16px">
+    ${farmHtml({lb:true, userCount:8, servers:[{load:45},{load:52},{load:48}]})}
+    <div class="farm-cap">A <b style="color:#55efc4">load balancer</b> gives clients <b>one address</b> and spreads requests across a <b>pool of servers</b>, so none is overwhelmed. Need more capacity? Just add servers — <b>horizontal scaling</b>.</div>
+  </div>`;
+}
+function rLbHow(){
+  return `<div class="art" style="gap:16px">
+    ${farmHtml({lb:true, userCount:6, servers:[{load:40},{load:44},{load:38},{load:42}]})}
+    <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center;max-width:840px">
+      ${infoCard('1️⃣','Receive','A request arrives at the balancer’s single virtual IP.')}
+      ${infoCard('2️⃣','Choose','It picks a healthy server using a routing algorithm.')}
+      ${infoCard('3️⃣','Forward','It relays the request and streams the response back.')}
+      ${infoCard('❤️','Health checks','It constantly pings servers and drops any that fail — no user hits a dead one.')}
+    </div>
+  </div>`;
+}
+function rLbLayers(){
+  return `<div class="art">${compareHtml(
+    {color:'#0984e3',icon:'4️⃣',title:'Layer 4 (Transport)',sub:'routes by IP + port',
+     rows:[['⚡','Very fast — just forwards TCP/UDP'],['🙈','Never looks inside the request'],['🔌','Ideal for raw throughput'],['🔧','e.g. AWS NLB, IPVS']],
+     foot:'Decides using only network info (IP/port).'},
+    {color:'#e84393',icon:'7️⃣',title:'Layer 7 (Application)',sub:'routes by content',
+     rows:[['🧠','Reads HTTP — URL, headers, cookies'],['🧭','Content routing: /api → API pool, /img → images'],['🔐','Can do TLS termination, caching, auth'],['🔧','e.g. NGINX, HAProxy, AWS ALB']],
+     foot:'Smarter, but more work per request.'}
+  )}</div>`;
+}
+function rLbRoundRobin(){
+  return `<div class="art" style="gap:16px">
+    ${farmHtml({lb:true, userCount:6, servers:[{load:50},{load:50},{load:50},{load:50}]})}
+    <div class="farm-cap"><b>Round Robin</b>: send each new request to the next server in turn — 1 → 2 → 3 → 4 → 1 … Simple and even when servers are similar.</div>
+  </div>`;
+}
+function rLbAlgos(){
+  const algos=[
+    {n:'Round Robin',          color:'#00b894', use:'Each request to the next server in turn. Simple, even — assumes servers are equal.'},
+    {n:'Weighted Round Robin', color:'#0984e3', use:'Stronger servers get a higher weight → more requests. Good for mixed hardware.'},
+    {n:'Least Connections',    color:'#a29bfe', use:'Send to the server with the fewest active connections. Great for long-lived or uneven requests.'},
+    {n:'Least Response Time',  color:'#fdcb6e', use:'Pick the fastest-responding, least-busy server.'},
+    {n:'IP Hash',              color:'#e84393', use:'Hash the client IP → the same client always maps to the same server (basic stickiness).'},
+    {n:'Random / Power-of-Two',color:'#e17055', use:'Pick at random — or pick two and choose the less loaded. Cheap and surprisingly even.'},
+  ];
+  return `<div class="art"><div class="algogrid">`+algos.map(a=>`
+    <div class="algocard" style="border-left-color:${a.color}">
+      <div class="an" style="color:${a.color}">${a.n}</div>
+      <div class="at" style="background:${a.color}">algorithm</div>
+      <div class="au">${a.use}</div>
+    </div>`).join('')+`</div></div>`;
+}
+function rLbState(){
+  return `<div class="art" style="gap:16px">${compareHtml(
+    {color:'#00b894',icon:'♾️',title:'Stateless',sub:'any server can serve any request',
+     rows:[['🔀','Each request is independent'],['📈','Scales freely — add/remove servers anytime'],['💪','A server dying loses nothing'],['🗄️','Session kept in a shared store (Redis) or a token (JWT)']],
+     foot:'The preferred, cloud-native design.'},
+    {color:'#fdcb6e',icon:'📌',title:'Stateful (sticky sessions)',sub:'a user is tied to one server',
+     rows:[['🧷','Session stored on one specific server'],['🍪','LB must pin the user there (cookie / IP hash) — “affinity”'],['⚠️','If that server dies, the session is lost'],['📉','Uneven load, harder to scale']],
+     foot:'Sometimes necessary — but avoid when you can.'}
+  )}</div>`;
+}
+function rLbLocalGlobal(){
+  return `<div class="art" style="gap:16px">
+    <div class="lb-bar" style="max-width:380px;border-color:#a29bfe;color:#cdb4ff;background:linear-gradient(90deg,#241b34,#1a1430)">🌍 Global LB (GSLB) — picks the region</div>
+    <div style="display:flex;gap:24px;flex-wrap:wrap;justify-content:center">
+      <div class="region-box">🇮🇳 Mumbai region<span class="rl">Local LB ⚖️</span><div class="reg-srv">🖥️🖥️🖥️</div></div>
+      <div class="region-box">🇺🇸 Virginia region<span class="rl">Local LB ⚖️</span><div class="reg-srv">🖥️🖥️🖥️</div></div>
+    </div>
+    <div class="farm-cap">A <b>Local LB</b> spreads traffic across servers <i>within one data center</i> (Layer 4/7). A <b>Global LB (GSLB)</b> works <i>across regions worldwide</i> — first it sends you to the best region, then the local LB there picks a server.</div>
+  </div>`;
+}
+function rLbGeo(){
+  return `<div class="art" style="gap:16px">
+    <div class="geowrap">
+      <div class="geo-user">👤<div class="gname">You — Mumbai 🇮🇳</div></div>
+      <div style="font-size:20px;color:#ff7675">─────→</div>
+      <div class="geo-dcs"><div class="dc far"><div class="di">🏢</div><div class="dn">Virginia DC 🇺🇸</div><div class="dl" style="color:#ff7675">~230 ms ❌</div></div></div>
+    </div>
+    <div class="farm-cap">If every user hits <b>one far-away data center</b>, distant users suffer high <b>latency</b>. A <b>GSLB</b> fixes this by routing each user to their <b>nearest healthy</b> region — let’s see the two ways it can do that.</div>
+  </div>`;
+}
+function rLbGslbDns(){
+  return `<div class="art" style="gap:16px">
+    ${chainHtml([{icon:'👤',nm:'You',sub:'Mumbai',gl:'#fdcb6eaa'},{icon:'🧭',nm:'GSLB as DNS',sub:'geo-aware',gl:'#a29bfeaa'},{icon:'🏢',nm:'Mumbai DC',sub:'nearest IP',gl:'#00b894aa'}],2,1,'back','➜ use 1.2.3.4 (Mumbai)','ans')}
+    <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center;max-width:840px">
+      ${infoCard('🗺️','How it works','The GSLB is the domain’s authoritative DNS. Based on the resolver’s location &amp; server health, it answers with the IP of the nearest healthy region.')}
+      ${infoCard('👍','Pros','Simple, works with any client, no special network setup.')}
+      ${infoCard('👎','Cons','DNS caching/TTL makes failover slow; it sees the resolver’s location, not the user’s exact one.')}
+    </div>
+  </div>`;
+}
+function rLbGslbAnycast(){
+  return `<div class="art" style="gap:16px">
+    <div class="aspath" style="font-size:13.5px">Same IP <span class="asn">203.0.113.9</span> announced from Mumbai, Frankfurt &amp; Virginia — <span style="color:#74b9ff">BGP routes you to the nearest</span></div>
+    ${chainHtml([{icon:'👤',nm:'You',sub:'Mumbai',gl:'#fdcb6eaa'},{icon:'🌐',nm:'BGP / Internet',sub:'shortest path',gl:'#0984e3aa'},{icon:'🏢',nm:'Mumbai PoP',sub:'same anycast IP',gl:'#00b894aa'}],2,1,'fwd','📦 → 203.0.113.9','')}
+    <div style="display:flex;gap:12px;flex-wrap:wrap;justify-content:center;max-width:840px">
+      ${infoCard('📡','How it works','The <i>same</i> IP is advertised from many locations via BGP (Chapter 10!). The network naturally delivers you to the closest one.')}
+      ${infoCard('👍','Pros','Very fast, near-instant failover (just withdraw the route), one IP everywhere.')}
+      ${infoCard('👎','Cons','Less per-user control; a route change mid-connection can reset long TCP sessions.')}
+    </div>
+  </div>`;
+}
+function rLbGslbCompare(){
+  return `<div class="art">${compareHtml(
+    {color:'#a29bfe',icon:'🧭',title:'DNS-based GSLB',sub:'answers with a nearby IP',
+     rows:[['🗺️','Routes by resolver geo + health'],['🐢','Failover limited by DNS TTL/caching'],['🎯','Granular, policy-rich control'],['🛠️','No special network needed']],
+     foot:'Flexible — but failover is only as fast as DNS caches allow.'},
+    {color:'#00b894',icon:'📡',title:'Anycast GSLB',sub:'one IP, many sites (BGP)',
+     rows:[['🌐','Network routes you to the nearest PoP'],['⚡','Near-instant failover via BGP'],['📍','Less granular per-user control'],['🔁','Route flaps can break long TCP sessions']],
+     foot:'Fast and simple — leans on BGP routing.'}
+  )}</div>`;
+}
+function rLbProsCons(){
+  return `<div class="art">${compareHtml(
+    {color:'#00b894',icon:'✅',title:'Advantages',sub:'why we add a load balancer',
+     rows:[['📈','Scalability — add servers behind it freely'],['🛟','High availability — reroutes around failures'],['❤️','Health checks drop dead servers automatically'],['⚙️','Zero-downtime deploys & maintenance'],['🔐','Can offload TLS, caching, compression'],['🌍','Geo-routing & better performance (GSLB)']],
+     foot:'The backbone of any scalable, resilient system.'},
+    {color:'#ff7675',icon:'⚠️',title:'Disadvantages',sub:'the costs to weigh',
+     rows:[['💥','A single point of failure — unless made redundant'],['🧩','Added complexity to build & operate'],['💸','Extra cost (hardware or managed service)'],['🐢','An extra hop adds a little latency'],['📌','Stateful apps need sticky sessions — harder to scale'],['🔧','Misconfiguration can take everything down']],
+     foot:'Almost always worth it — but never “free”.'}
+  )}</div>`;
+}
+function rLbSpof(){
+  return `<div class="art" style="gap:16px">
+    <div class="vip-badge">🌐 Virtual IP (VIP) — the one address clients use: 203.0.113.50</div>
+    <div class="ha-pair">
+      <div class="ha-lb active">⚖️ LB-A<span class="hastate" style="color:#55efc4">● ACTIVE — holds the VIP</span></div>
+      <div class="heartbeat">❤️<div class="hb-line"></div><span>heartbeat</span></div>
+      <div class="ha-lb standby">⚖️ LB-B<span class="hastate">○ STANDBY — ready to take over</span></div>
+    </div>
+    <div class="farm-cap">Sharp catch — a <b>lone LB just moves</b> the single point of failure, it doesn’t remove it. The fix: run <b>two or more</b> LBs. They share one <b>Virtual IP</b> and watch each other with a <b>heartbeat</b> (VRRP / keepalived). If the active one dies, the standby <b style="color:#55efc4">grabs the VIP within seconds</b> — clients change nothing.</div>
+  </div>`;
+}
+function rLbHA(){
+  return `<div class="art" style="gap:16px">${compareHtml(
+    {color:'#fdcb6e',icon:'🟢',title:'Active – Passive',sub:'one serves, one waits',
+     rows:[['💓','Heartbeat (VRRP/keepalived) between them'],['🔁','Standby seizes the floating/Virtual IP on failure'],['⏱️','Failover in seconds'],['😴','The spare sits idle until needed']],
+     foot:'Simple and reliable; half your LB capacity is on standby.'},
+    {color:'#00b894',icon:'🟢🟢',title:'Active – Active',sub:'all serve at once',
+     rows:[['📈','Every LB takes traffic — more total capacity'],['🧭','DNS or Anycast spreads clients across them'],['🛟','One dies → its share reroutes to the rest'],['🧩','More complex (shared / synced state)']],
+     foot:'Higher throughput; combine with multi-AZ for true HA.'}
+  )}
+    <div class="hybridnote">🏢 Go further: place LBs across multiple <b>Availability Zones / regions</b> and front them with <b>Anycast or DNS</b>, so even a whole-data-center outage is survived.</div>
+  </div>`;
+}
+function rLbTiers(){
+  return `<div class="art" style="gap:8px">
+    <div class="tier" style="border-color:#00cec9"><div class="tlabel">🌍 Internet</div><div class="tdesc">Anycast IP → nearest edge</div></div>
+    <div class="tier-arrow">↓</div>
+    <div class="tier t1"><div class="tlabel" style="color:#74b9ff">Tier 1 · Layer 4 (transport)</div><div class="trow">⚖️ ⚖️ ⚖️</div><div class="tdesc">blazing-fast, spreads raw connections — cheap to scale wide</div></div>
+    <div class="tier-arrow">↓</div>
+    <div class="tier t2"><div class="tlabel" style="color:#ff9ff3">Tier 2 · Layer 7 (application)</div><div class="trow">⚖️ ⚖️</div><div class="tdesc">content-aware routing, TLS termination, /api vs /img</div></div>
+    <div class="tier-arrow">↓</div>
+    <div class="tier"><div class="tlabel">App servers</div><div class="trow">🖥️ 🖥️ 🖥️ 🖥️</div></div>
+    <div class="farm-cap" style="margin-top:8px">At large scale, yes — LBs are <b>tiered</b>. A thin <b>Tier-1 Layer-4</b> layer soaks up enormous connection volume and fans it out (often via Anycast/ECMP) to a fleet of <b>Tier-2 Layer-7</b> balancers that do the expensive smart routing. Each tier <b>scales independently</b>, and the cheap fast layer shields the smart one.</div>
+  </div>`;
+}
+
 const RENDER={ title:rTitle, dns:rDns, tcp:rTcp, tls:rTls,
                encwhy:rEncWhy, enctypes:rEncTypes, hashing:rHashing, algos:rAlgos,
                build:rBuild, tcpudp:rTcpUdp, mtu:rMtu, ipaddr:rIpAddr, ipversion:rIpVersion, iptype:rIpType,
                fiber:rFiber, bandwidth:rBandwidth, cellular:rCellular,
+               bgpProblem:rBgpProblem, bgpAS:rBgpAS, bgpAnnounce:rBgpAnnounce, bgpPath:rBgpPath,
+               bgpBest:rBgpBest, bgpForward:rBgpForward, bgpTrust:rBgpTrust,
+               lbProblem:rLbProblem, lbSolution:rLbSolution, lbHow:rLbHow, lbLayers:rLbLayers,
+               lbRoundRobin:rLbRoundRobin, lbAlgos:rLbAlgos, lbState:rLbState, lbLocalGlobal:rLbLocalGlobal,
+               lbGeo:rLbGeo, lbGslbDns:rLbGslbDns, lbGslbAnycast:rLbGslbAnycast, lbGslbCompare:rLbGslbCompare, lbProsCons:rLbProsCons,
+               lbSpof:rLbSpof, lbHA:rLbHA, lbTiers:rLbTiers,
                lan:rLan, wan:rWan, arrival:rArrival, done:rDone };
 
 /* =====================================================================
    ENGINE
    ===================================================================== */
-let idx=0, autoTimer=null;
+let idx=0, autoTimer=null, deckKey='network';
 const sceneEl=document.getElementById('scene');
-const chapters=[...new Set(BEATS.map(b=>b.ch))];
+const DECKS={ network:NET_BEATS, loadbalancer:LB_BEATS };
+const SD_COMPONENTS=[
+  {deck:'loadbalancer', num:'01', icon:'⚖️', color:'#00b894', title:'Load Balancer',
+   blurb:'Spread traffic across many servers — how it works, L4 vs L7, routing algorithms, stateful vs stateless, and global load balancing (GSLB: DNS vs Anycast).'},
+];
+function uniqueChapters(beats){ return [...new Set(beats.map(b=>b.ch))]; }
+let BEATS=DECKS[deckKey];
+let chapters=uniqueChapters(BEATS);
+function setDeck(key){ deckKey=key; BEATS=DECKS[key]; chapters=uniqueChapters(BEATS); buildSegs(); }
 
 function buildSegs(){
   const segs=document.getElementById('segs'); segs.innerHTML='';
@@ -1006,7 +1394,7 @@ function render(){
   sceneEl.innerHTML = art + `<div class="narr">
       <h2 class="ttl">${b.ttl}</h2><p class="txt">${b.txt}</p></div>`;
   // top bar
-  document.getElementById('chapterChip').textContent='Chapter '+b.ch;
+  document.getElementById('chapterChip').textContent=(deckKey==='network'?'Chapter ':'')+b.ch;
   document.getElementById('count').textContent=(idx+1)+' / '+BEATS.length;
   const curCh=chapters.indexOf(b.ch);
   document.querySelectorAll('.seg').forEach((s,i)=>{
@@ -1030,7 +1418,7 @@ document.getElementById('restart').onclick=()=>{stopAuto();restart();};
 document.getElementById('auto').onchange=e=>{ e.target.checked?startAuto():stopAuto(); };
 document.addEventListener('keydown',e=>{
   if(document.body.classList.contains('on-home')){
-    if(e.code==='Enter'){ e.preventDefault(); enterStory(0); }
+    if(e.code==='Enter'){ e.preventDefault(); enterStory('network',0); }
     return;
   }
   if(e.code==='ArrowRight'||e.code==='Space'){e.preventDefault();stopAuto();next();}
@@ -1050,38 +1438,46 @@ const CHMETA={
   '7 · A Closer Look':        {icon:'🔬', color:'#e17055', blurb:'TCP vs UDP, MTU & packets, IP addresses, IPv4/6, public vs private.'},
   '8 · Leaving Home':         {icon:'🏠', color:'#fdcb6e', blurb:'ARP finds the router, a Wi-Fi hop, then NAT rewrites your address.'},
   '9 · How the Signal Travels':{icon:'💡',color:'#74b9ff', blurb:'Optical fibre & light pulses, bandwidth, and 2G → 5G.'},
-  '10 · Across the Internet':  {icon:'🌐', color:'#00cec9', blurb:'Router hops to Google’s data center, TTL ticking down.'},
-  '11 · Arrival & Reply':      {icon:'📨', color:'#55efc4', blurb:'Google unwraps, builds the page, and the reply comes back.'},
+  '10 · BGP — Mapping the Internet':{icon:'🗺️',color:'#ffeaa7', blurb:'How ~75,000 networks tell each other the way — Autonomous Systems, announcements & AS-PATHs.'},
+  '11 · Across the Internet':  {icon:'🌐', color:'#00cec9', blurb:'Router hops to Google’s data center, TTL ticking down.'},
+  '12 · Arrival & Reply':      {icon:'📨', color:'#55efc4', blurb:'Google unwraps, builds the page, and the reply comes back.'},
   '✓ Done':                    {icon:'✅', color:'#00b894', blurb:'The recap — all of it in roughly 100 milliseconds.'},
 };
-function chapterIndex(){
+function chapterIndex(beats){
   const map={};
-  BEATS.forEach((b,i)=>{ if(!(b.ch in map)) map[b.ch]={first:i,count:0}; map[b.ch].count++; });
+  beats.forEach((b,i)=>{ if(!(b.ch in map)) map[b.ch]={first:i,count:0}; map[b.ch].count++; });
   return map;
 }
+function cardHtml(num,icon,color,title,blurb,steps,deck,first){
+  return `<div class="homecard" style="border-top-color:${color}" data-deck="${deck}" data-i="${first}">
+     <div class="hc-top"><span class="hc-num" style="background:${color}">${num}</span><span class="hc-ic">${icon}</span></div>
+     <div class="hc-title">${title}</div>
+     <div class="hc-blurb">${blurb}</div>
+     <div class="hc-steps">${steps} step${steps>1?'s':''} →</div>
+   </div>`;
+}
 function buildHome(){
-  const grid=document.getElementById('homeGrid');
-  const info=chapterIndex();
-  grid.innerHTML = chapters.map(ch=>{
+  const body=document.getElementById('homeBody');
+  // Section 1 — the networking story
+  const netInfo=chapterIndex(NET_BEATS), netChs=uniqueChapters(NET_BEATS);
+  let html = `<div class="sec-h"><h2>🌐 The Journey of a Click</h2><p>Follow one request across the internet — DNS, TLS, encryption, routing, BGP and back.</p></div><div class="home-grid">`;
+  html += netChs.map(ch=>{
     const m=CHMETA[ch]||{icon:'•',color:'#4c6ef5',blurb:''};
-    const meta=info[ch];
-    const parts=ch.split(' · ');
-    const num=parts[0], title=parts.slice(1).join(' · ')||ch;
-    return `<div class="homecard" style="border-top-color:${m.color}" data-i="${meta.first}">
-       <div class="hc-top"><span class="hc-num" style="background:${m.color}">${num}</span><span class="hc-ic">${m.icon}</span></div>
-       <div class="hc-title">${title}</div>
-       <div class="hc-blurb">${m.blurb}</div>
-       <div class="hc-steps">${meta.count} step${meta.count>1?'s':''} →</div>
-     </div>`;
-  }).join('');
-  grid.querySelectorAll('.homecard').forEach(c=> c.onclick=()=> enterStory(+c.dataset.i));
+    const parts=ch.split(' · '), num=parts[0], title=parts.slice(1).join(' · ')||ch;
+    return cardHtml(num,m.icon,m.color,title,m.blurb,netInfo[ch].count,'network',netInfo[ch].first);
+  }).join('') + `</div>`;
+  // Section 2 — system design components
+  html += `<div class="sec-h"><h2>🏗️ System Design</h2><p>The building blocks of large-scale systems — each taught as a story.</p></div><div class="home-grid">`;
+  html += SD_COMPONENTS.map(c=> cardHtml(c.num,c.icon,c.color,c.title,c.blurb,DECKS[c.deck].length,c.deck,0)).join('') + `</div>`;
+  body.innerHTML = html;
+  body.querySelectorAll('.homecard').forEach(c=> c.onclick=()=> enterStory(c.dataset.deck, +c.dataset.i));
   document.getElementById('homeFoot').textContent =
-    `${chapters.length} chapters · ${BEATS.length} steps · pick any chapter to jump in`;
+    `${netChs.length} story chapters · ${SD_COMPONENTS.length} system-design component${SD_COMPONENTS.length>1?'s':''} (and growing)`;
 }
 function showHome(){ stopAuto(); document.body.classList.add('on-home'); }
-function enterStory(i){ document.body.classList.remove('on-home'); idx=i; render(); document.getElementById('stage').scrollTop=0; }
+function enterStory(deck,i){ if(deck) setDeck(deck); document.body.classList.remove('on-home'); idx=i; render(); document.getElementById('stage').scrollTop=0; }
 
-document.getElementById('startBtn').onclick=()=>enterStory(0);
+document.getElementById('startBtn').onclick=()=>enterStory('network',0);
 document.getElementById('homeBtn').onclick=()=>showHome();
 
 buildSegs();
